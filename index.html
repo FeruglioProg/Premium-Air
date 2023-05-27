@@ -21,9 +21,7 @@
      crossorigin="anonymous"></script>
 
 </head>
-<body>
-
-   
+<body onclick="PlayAudio">
    
 <!-- header section starts     -->
 
@@ -360,13 +358,21 @@
 </section>
 
 <!-- footer section ends -->
-
-
 <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
 <div class="elfsight-app-813f07ee-c786-4a96-afa6-8c098ae1364d" style="text-align: center;"></div>
 
 <!-- custom js file link  -->
 <script src="js/script.js"></script>
+
+<audio id="musica1">
+   <source src="./audio/Welcome_to_premium_AIR.mp3" type="audio/mpeg">
+ </audio>
+
+ <script>
+   function PlayAudio() {
+      document.getElementById("musica1").play();
+   }
+ </script>
 
 </body>
 </html>

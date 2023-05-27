@@ -1,0 +1,4 @@
+This is a Brave Rewards publisher verification file.
+
+Domain: premiumair.netlify.app
+Token: 2b5c0e7a2cfb90e245832b1dadc1b0db2631fa70e1af95365510444d57166d10
