@@ -149,67 +149,66 @@
          <img src="images/menu-1.png" alt="">
          <h3>Sun Air</h3>
          <p>$5 (Pesos Argentinos)</p>
-         <a href="https://mpago.la/1bzagdA" class="link-btn">Buy</a>
+         <a href="https://mpago.la/1bzagdA" class="link-btn" id="btn_buy">Buy</a>
       </div>
 
       <div class="box">
          <img src="images/menu-7.png" alt="">
          <h3>Jordan Air</h3>
          <p>$27 (Pesos Argentinos)</p>
-         <a href="https://mpago.la/2cJbNAd" class="link-btn">Buy</a>
+         <a href="https://mpago.la/2cJbNAd" class="link-btn" id="btn_buy">Buy</a>
       </div>
 
       <div class="box">
          <img src="images/menu-8.png" alt="">
          <h3>Nuke Air</h3>
          <p>$31 (Pesos Argentinos)</p>
-         <a href="https://mpago.la/1WjWVhR" class="link-btn">Buy</a>
+         <a class="link-btn" id="btn_buy">Buy</a>
+         <!-- href="https://mpago.la/1WjWVhR" -->
       </div>
 
       <div class="box">
          <img src="images/menu-2.png" alt="">
          <h3>Yellow Air</h3>
          <p>$7 (Pesos Argentinos)</p>
-         <a href="https://mpago.la/2FipzhQ" class="link-btn">Buy</a>
+         <a href="https://mpago.la/2FipzhQ" class="link-btn" id="btn_buy">Buy</a>
       </div>
 
       <div class="box">
          <img src="images/menu-9.png" alt="">
          <h3>Vegan Air</h3>
          <p>$11 (Pesos Argentinos)</p>
-         <a href="https://mpago.la/1tgGjSf" class="link-btn">Buy</a>
+         <a href="https://mpago.la/1tgGjSf" class="link-btn" id="btn_buy">Buy</a>
       </div>
 
       <div class="box">
          <img src="images/menu-3.png" alt="">
          <h3>Ice Air</h3>
          <p>$9 (Pesos Argentinos)</p>
-         <a href="https://mpago.la/1KFvAVV" class="link-btn">Buy</a>
+         <a href="https://mpago.la/1KFvAVV" class="link-btn" id="btn_buy">Buy</a>
       </div>
 
       <div class="box">
          <img src="images/menu-4.png" alt="">
          <h3>Air Coffee</h3>
          <p>$12 (Pesos Argentinos)</p>
-         <a href="https://mpago.la/2sstRxG" class="link-btn">Buy</a>
+         <a href="https://mpago.la/2sstRxG" class="link-btn" id="btn_buy">Buy</a>
       </div>
 
       <div class="box">
          <img src="images/menu-5.png" alt="">
          <h3>Air of Nowhere</h3>
          <p>$2 (Pesos Argentinos)</p>
-         <a href="https://mpago.la/27qUaWc" class="link-btn">Buy</a>
+         <a href="https://mpago.la/27qUaWc" class="link-btn" id="btn_buy">Buy</a>
       </div>
 
       <div class="box">
          <img src="images/menu-6.png" alt="">
          <h3>Eco Air</h3>
          <p>$6 (Pesos Argentinos)</p>
-         <a href="https://mpago.la/2tUjU3k" class="link-btn">Buy</a>
+         <a href="https://mpago.la/2tUjU3k" class="link-btn" id="btn_buy">Buy</a>
       </div>
-
    </div>
-
 </section>
 
 <!-- menu section ends -->
@@ -361,18 +360,23 @@
 <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
 <div class="elfsight-app-813f07ee-c786-4a96-afa6-8c098ae1364d" style="text-align: center;"></div>
 
-<!-- custom js file link  -->
-<script src="js/script.js"></script>
-
-<audio id="musica1">
-   <source src="./audio/Welcome_to_premium_AIR.mp3" type="audio/mpeg">
- </audio>
-
- <script>
+<!-- Audio Musica -->
+<script>
    function PlayAudio() {
       document.getElementById("musica1").play();
    }
- </script>
+</script>
+<audio id="musica1">
+   <source src="./audio/Welcome_to_premium_AIR.mp3" type="audio/mpeg">
+</audio>
 
+<!-- EmailJs -->
+<script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+<script type="text/javascript">
+   emailjs.init('iPdn8yYTeZt893mpJ')
+</script>
+
+<!-- custom js file link  -->
+<script src="js/script.js"></script>
 </body>
 </html>
