@@ -1,4 +1,4 @@
-const btnBuy = document.getElementById('btn_buy');
+/* const btnBuy = document.getElementById('btn_buy'); */
 let loginForm = document.querySelector('.login-form');
 let menu = document.querySelector('#menu-btn');
 let navbar = document.querySelector('.header .nav');
@@ -28,6 +28,7 @@ window.onscroll = () =>{
    }
 }
 
+/*
 btnBuy.addEventListener('click', function (event) {
    console.log("Evento de clic agregado");
    event.preventDefault();
@@ -53,3 +54,4 @@ btnBuy.addEventListener('click', function (event) {
       alert('Error al enviar el correo de agradecimiento: ' + JSON.stringify(err));
    });
 });
+*/
