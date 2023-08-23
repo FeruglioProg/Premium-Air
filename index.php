@@ -1,80 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-   <meta charset="UTF-8">
-   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Premium Air</title>
-
-   <!-- font awesome cdn link  -->
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-
-   <!-- bootstrap cdn link  -->
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.1/css/bootstrap.min.css">
-
-   <!-- custom css file link  -->
-   <link rel="stylesheet" href="css/style.css">
-
-   <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
-
-   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7789689269935618"
-     crossorigin="anonymous"></script>
-
-</head>
-<body onclick="PlayAudio">
-   
-<!-- header section starts     -->
-
-<header class="header fixed-top">
-
-   <div class="container">
-
-      <div class="row align-items-center">
-
-         <a href="#" class="logo mr-auto"> <i class="fas fa-cloud"></i> Premium Air  </a>
-
-         <nav class="nav">
-            <a href="#home">Home</a>
-            <a href="#about">About</a>
-            <a href="#menu">Menu</a>
-            <a href="#blogs">Membership</a>
-            <a href="#contact">Contact</a>
-         </nav>
-
-         <div class="icons">
-            <div id="menu-btn" class="fas fa-bars"></div>
-            <div id="login-btn" class="fas fa-user"></div>
-         </div>
-
-      </div>
-
-   </div>
-
-</header>
-
-<!-- login form starts -->
-
-<div class="login-form">
-
-   <form action="">
-      <div id="close-login-form" class="fas fa-times"></div>
-      <a href="#" class="logo mr-auto"> <i class="fas fa-cloud"></i> Premium Air </a>
-      <h3>let's start a new great day</h3>
-      <input type="email" name="" placeholder="enter your email" id="" class="box">
-      <input type="password" name="" placeholder="enter your password" id="" class="box">
-      <div class="flex">
-         <input type="checkbox" name="" id="remember-me">
-         <label for="remember-me">remember me</label>
-         <a href="#">forgot password?</a>
-      </div>
-      <input type="submit" value="login now" class="link-btn">
-      <p class="account">don't have an account? <a href="#">create one!</a></p>
-   </form>
-
-</div>
-
-<!-- login form ends -->
-
+<?php
+  session_start();
+  include_once $_SERVER["DOCUMENT_ROOT"].'/Premium-Air/Views/Layouts/header.php';
+?>
 <!-- header section ends    -->
 
 <!-- home section starts  -->
@@ -105,7 +32,7 @@
 
       <div class="row align-items-center">
          <div class="col-md-6">
-            <img src="images/about-img-1.jpg" class="w-100" alt="">
+            <img src="Util/images/about-img-1.jpg" class="w-100" alt="">
          </div>
          <div class="col-md-6">
             <span>Why choose us?</span>
@@ -146,63 +73,63 @@
    <div class="container box-container">
 
       <div class="box">
-         <img src="images/menu-1.png" alt="">
+         <img src="Util/images/menu-1.png" alt="">
          <h3>Sun Air</h3>
          <p>$5 (Pesos Argentinos)</p>
          <a href="https://mpago.la/1bzagdA" class="link-btn" id="btn_buy">Buy</a>
       </div>
 
       <div class="box">
-         <img src="images/menu-7.png" alt="">
+         <img src="Util/images/menu-7.png" alt="">
          <h3>Jordan Air</h3>
          <p>$27 (Pesos Argentinos)</p>
          <a href="https://mpago.la/2cJbNAd" class="link-btn" id="btn_buy">Buy</a>
       </div>
 
       <div class="box">
-         <img src="images/menu-8.png" alt="">
+         <img src="Util/images/menu-8.png" alt="">
          <h3>Nuke Air</h3>
          <p>$31 (Pesos Argentinos)</p>
          <a href="https://mpago.la/1WjWVhR" class="link-btn" id="btn_buy">Buy</a>
       </div>
 
       <div class="box">
-         <img src="images/menu-2.png" alt="">
+         <img src="Util/images/menu-2.png" alt="">
          <h3>Yellow Air</h3>
          <p>$7 (Pesos Argentinos)</p>
          <a href="https://mpago.la/2FipzhQ" class="link-btn" id="btn_buy">Buy</a>
       </div>
 
       <div class="box">
-         <img src="images/menu-9.png" alt="">
+         <img src="Util/images/menu-9.png" alt="">
          <h3>Vegan Air</h3>
          <p>$11 (Pesos Argentinos)</p>
          <a href="https://mpago.la/1tgGjSf" class="link-btn" id="btn_buy">Buy</a>
       </div>
 
       <div class="box">
-         <img src="images/menu-3.png" alt="">
+         <img src="Util/images/menu-3.png" alt="">
          <h3>Ice Air</h3>
          <p>$9 (Pesos Argentinos)</p>
          <a href="https://mpago.la/1KFvAVV" class="link-btn" id="btn_buy">Buy</a>
       </div>
 
       <div class="box">
-         <img src="images/menu-4.png" alt="">
+         <img src="Util/images/menu-4.png" alt="">
          <h3>Air Coffee</h3>
          <p>$12 (Pesos Argentinos)</p>
          <a href="https://mpago.la/2sstRxG" class="link-btn" id="btn_buy">Buy</a>
       </div>
 
       <div class="box">
-         <img src="images/menu-5.png" alt="">
+         <img src="Util/images/menu-5.png" alt="">
          <h3>Air of Nowhere</h3>
          <p>$2 (Pesos Argentinos)</p>
          <a href="https://mpago.la/27qUaWc" class="link-btn" id="btn_buy">Buy</a>
       </div>
 
       <div class="box">
-         <img src="images/menu-6.png" alt="">
+         <img src="Util/images/menu-6.png" alt="">
          <h3>Eco Air</h3>
          <p>$6 (Pesos Argentinos)</p>
          <a href="https://mpago.la/2tUjU3k" class="link-btn" id="btn_buy">Buy</a>
@@ -222,7 +149,7 @@
 
       <div class="box">
          <div class="image">
-            <img src="images/g-img-1.png" alt="">
+            <img src="Util/images/g-img-1.png" alt="">
          </div>
          <div class="content">
             <h3>Bronze</h3>
@@ -239,7 +166,7 @@
 
       <div class="box">
          <div class="image">
-            <img src="images/g-img-2.png" alt="">
+            <img src="Util/images/g-img-2.png" alt="">
          </div>
          <div class="content">
             <h3>Silver</h3>
@@ -258,7 +185,7 @@
 
       <div class="box">
          <div class="image">
-            <img src="images/g-img-3.png" alt="">
+            <img src="Util/images/g-img-3.png" alt="">
          </div>
          <div class="content">
             <h3>Gold</h3>
@@ -337,47 +264,6 @@
 </section>
 
 <!-- contact section ends -->
-
-<!-- footer section starts  -->
-
-<section class="footer container">
-
-   <a href="#" class="logo"> <i class="fas fa-cloud"></i> Premium Air </a>
-
-   <p class="credit"> created by <span>Air Premium</span> | all rights reserved! <br> *These are not real articles, just a page in the form of a joke and investigation* </p>
-
-   <div class="share">
-      <a href="#" class="fas fa-cloud"></a>
-      <a href="#" class="fas fa-cloud"></a>
-      <a href="#" class="fas fa-cloud"></a>
-      <a href="#" class="fas fa-cloud"></a>
-   </div>
-   
-</section>
-
-<!-- footer section ends -->
-<script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
-<div class="elfsight-app-813f07ee-c786-4a96-afa6-8c098ae1364d" style="text-align: center;"></div>
-
-<!-- Audio Musica -->
-<script>
-   function PlayAudio() {
-      document.getElementById("musica1").play();
-   }
-</script>
-<audio id="musica1">
-   <source src="./audio/Welcome_to_premium_AIR.mp3" type="audio/mpeg">
-</audio>
-
-<!-- EmailJs -->
-<!--
-   <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
-   <script type="text/javascript">
-      emailjs.init('iPdn8yYTeZt893mpJ')
-   </script>
--->
-
-<!-- custom js file link  -->
-<script src="js/script.js"></script>
-</body>
-</html>
+<?php
+  include_once $_SERVER["DOCUMENT_ROOT"].'/Premium-Air/Views/Layouts/footer.php';
+?>
