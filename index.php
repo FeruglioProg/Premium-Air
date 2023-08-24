@@ -4,8 +4,9 @@
 ?>
 <!-- header section ends    -->
 
-<!-- home section starts  -->
+<title> Inicio | Premium Air</title>
 
+<!-- home section starts  -->
 <section class="home" id="home">
 
    <div class="container">

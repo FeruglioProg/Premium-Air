@@ -2,24 +2,30 @@
 <html lang="en">
 <head>
    <meta charset="UTF-8">
-   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <!--<meta http-equiv="X-UA-Compatible" content="IE=edge">-->
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Premium Air</title>
 
-   <!-- font awesome cdn link  -->
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+   <!-- Google Font: Source Sans Pro -->
+   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
 
    <!-- bootstrap cdn link  -->
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.1/css/bootstrap.min.css">
+   <link rel="stylesheet" href="../Premium-Air/Util/Css/bootstrap.min.css">
+
+   <!-- Font Awesome -->
+  <link rel="stylesheet" href="../Premium-Air/Util/Css/css/all.min.css">
+  <link rel="stylesheet" href="../Premium-Air/Util/Css/select2.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="../Premium-Air/Util/Css/adminlte.min.css">
+  <link rel="stylesheet" href="../Premium-Air/Util/Css/sweetalert2.min.css" >
+  <link rel="stylesheet" href="../Premium-Air/Util/Css/toastr.min.css">
 
    <!-- custom css file link  -->
-   <link rel="stylesheet" href="../Premium-Air/Util/css/style.css">
-   <link rel="stylesheet" href="../Premium-Air/Util/css/style.scss">
-
+   <link rel="stylesheet" href="../Premium-Air/Util/Css/style.css">
+   <link rel="stylesheet" href="../Premium-Air/Util/Css/style.scss">
    <link rel="icon" type="image/x-icon" href="../Premium-Air/Util/images/favicon.ico">
-
-   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7789689269935618"
-     crossorigin="anonymous"></script>
+   <link rel="stylesheet" href="https://cdn.datatables.net/v/dt/dt-1.13.5/datatables.min.css">
+   <!-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7789689269935618"
+     crossorigin="anonymous"></script> -->
 
 </head>
 <body>
@@ -55,7 +61,6 @@
 
 <!-- login form starts -->
 <div class="login-form">
-
    <form action="">
       <div id="close-login-form" class="fas fa-times"></div>
       <a href="#" class="logo mr-auto"> <i class="fas fa-cloud"></i> Premium Air </a>
@@ -70,5 +75,4 @@
       <input type="submit" value="login now" class="link-btn">
       <p class="account">don't have an account? <a href="#">create one!</a></p>
    </form>
-
 </div>
