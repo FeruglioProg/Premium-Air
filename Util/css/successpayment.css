@@ -1,0 +1,53 @@
+@import url("https://fonts.googleapis.com/css?family=Source+Code+Pro:400,500,600,700|Source+Sans+Pro:400,600,700&display=swap");
+*{
+  padding: 0;
+  margin: 0;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+body{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+.success-payment{
+  transition: 0.56s;
+  width: 300px;
+/*   max-width: 300px; */
+  background: #5888a4;
+  border: 1px solid rgb(255, 255, 255);
+  border-radius:10px;
+  height: 200px;
+  -webkit-box-shadow: 0px 2px 20px 7px rgba(0,0,0,0.16); 
+box-shadow: 0px 2px 20px 7px rgba(0,0,0,0.16);
+  display: flex; 
+  justify-content: center;
+  align-items: center;
+  flex-direction: column
+}
+.happy-wrap{
+  width: 40px;
+  color: #ff9e47; /* #fa8116; */
+}
+.check-wrap{
+  color: #ffffff;
+  width: 40px;
+}
+.failed-wrap{
+  width: 40px;
+  color: #ff7a7a;
+  display: none;
+}
+.success-text{
+  font-size: 16px;
+  color: #fff;
+  text-align: center;
+}
+.payment-details{
+  color: #fff;
+  text-align: center;
+  font-size: 12px;
+  margin-top: 10px;
+}

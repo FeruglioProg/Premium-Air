@@ -74,10 +74,24 @@
    <div class="container box-container">
 
       <div class="box">
+<<<<<<< HEAD:index.php
          <img src="Util/images/menu-1.png" alt="">
          <h3>Sun Air</h3>
          <p>$5 (Pesos Argentinos)</p>
          <a href="https://mpago.la/1bzagdA" class="link-btn" id="btn_buy">Buy</a>
+=======
+         <img src="images/menu-10.png" alt="">
+         <h3>Gucci Air</h3>
+         <p>$1500 (Pesos Argentinos)</p>
+         <a href="https://mpago.la/1FhtV3A" class="link-btn">Buy</a>
+      </div>
+
+      <div class="box">
+         <img src="images/menu-11.png" alt="">
+         <h3>LV Air</h3>
+         <p>$499 (Pesos Argentinos)</p>
+         <a href="https://mpago.la/27vBbgX" class="link-btn">Buy</a>
+>>>>>>> b23c3afdfd37b231b50797da04903b8aab80bf71:index.html
       </div>
 
       <div class="box">
@@ -88,7 +102,18 @@
       </div>
 
       <div class="box">
+<<<<<<< HEAD:index.php
          <img src="Util/images/menu-8.png" alt="">
+=======
+         <img src="images/menu-1.png" alt="">
+         <h3>Sun Air</h3>
+         <p>$5 (Pesos Argentinos)</p>
+         <a href="https://mpago.la/1bzagdA" class="link-btn">Buy</a>
+      </div>
+
+      <div class="box">
+         <img src="images/menu-8.png" alt="">
+>>>>>>> b23c3afdfd37b231b50797da04903b8aab80bf71:index.html
          <h3>Nuke Air</h3>
          <p>$31 (Pesos Argentinos)</p>
          <a href="https://mpago.la/1WjWVhR" class="link-btn" id="btn_buy">Buy</a>
