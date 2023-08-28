@@ -91,9 +91,17 @@ section {
   font-weight: bolder;
 }
 
+.header .nav{
+  display: flex;
+  padding: 10px 20px;
+  color: #fff;
+  position: relative;
+}
+
 .header .nav a {
   font-size: 2rem;
   margin-right: 2rem;
+  text-decoration: none;
   color: #fff;
 }
 
@@ -102,10 +110,16 @@ section {
   text-underline-offset: .5rem;
 }
 
+.header .icons {
+  position: absolute;
+  top: 50%;
+  right: 20px; 
+  transform: translateY(-50%); 
+}
+
 .header .icons div {
   font-size: 2.5rem;
   color: #fff;
-  margin-left: 2rem;
   cursor: pointer;
 }
 
@@ -113,6 +127,10 @@ section {
   display: none;
 }
 
+/*-----------------------------*/
+      /* CSS Login Form */
+/*-----------------------------*/
+/*
 .login-form {
   position: fixed;
   top: 0;
@@ -121,7 +139,6 @@ section {
   height: 100%;
   width: 100%;
   background: rgba(0, 0, 0, 0.8);
-  display: none;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -233,6 +250,7 @@ section {
 .login-form form .account a:hover {
   text-decoration: underline !important;
 }
+*/
 
 .home {
   background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../images/home-bg.jpg) no-repeat;

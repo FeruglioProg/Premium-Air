@@ -26,7 +26,6 @@
    <link rel="stylesheet" href="https://cdn.datatables.net/v/dt/dt-1.13.5/datatables.min.css">
    <!-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7789689269935618"
      crossorigin="anonymous"></script> -->
-
 </head>
 <body>
    
@@ -46,33 +45,23 @@
             <a href="#menu">Menu</a>
             <a href="#blogs">Membership</a>
             <a href="#contact">Contact</a>
+            <div class="icons">
+               <ul id="main_login" class="navbar-nav ml-auto">
+                  <!--
+                  <div id="loader_1" class="overlay">
+                     <i class="fas fa-2x fa-sync-alt fa-spin"></i>
+                  </div>   
+                  -->
+               </ul>
+               <!--
+                  <div id="menu-btn" class="fas fa-bars"></div>
+                  <div id="login-btn" class="fas fa-user"></div>
+               -->
+            </div>
          </nav>
-
-         <div class="icons">
-            <div id="menu-btn" class="fas fa-bars"></div>
-            <div id="login-btn" class="fas fa-user"></div>
-         </div>
 
       </div>
 
    </div>
 
 </header>
-
-<!-- login form starts -->
-<div class="login-form">
-   <form action="">
-      <div id="close-login-form" class="fas fa-times"></div>
-      <a href="#" class="logo mr-auto"> <i class="fas fa-cloud"></i> Premium Air </a>
-      <h3>let's start a new great day</h3>
-      <input type="email" name="" placeholder="enter your email" id="" class="box">
-      <input type="password" name="" placeholder="enter your password" id="" class="box">
-      <div class="flex">
-         <input type="checkbox" name="" id="remember-me">
-         <label for="remember-me">remember me</label>
-         <a href="#">forgot password?</a>
-      </div>
-      <input type="submit" value="login now" class="link-btn">
-      <p class="account">don't have an account? <a href="#">create one!</a></p>
-   </form>
-</div>

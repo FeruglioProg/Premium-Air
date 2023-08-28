@@ -74,24 +74,17 @@
    <div class="container box-container">
 
       <div class="box">
-<<<<<<< HEAD:index.php
-         <img src="Util/images/menu-1.png" alt="">
-         <h3>Sun Air</h3>
-         <p>$5 (Pesos Argentinos)</p>
-         <a href="https://mpago.la/1bzagdA" class="link-btn" id="btn_buy">Buy</a>
-=======
-         <img src="images/menu-10.png" alt="">
+         <img src="Util/images/menu-10.png" alt="">
          <h3>Gucci Air</h3>
          <p>$1500 (Pesos Argentinos)</p>
          <a href="https://mpago.la/1FhtV3A" class="link-btn">Buy</a>
       </div>
 
       <div class="box">
-         <img src="images/menu-11.png" alt="">
+         <img src="Util/images/menu-11.png" alt="">
          <h3>LV Air</h3>
          <p>$499 (Pesos Argentinos)</p>
          <a href="https://mpago.la/27vBbgX" class="link-btn">Buy</a>
->>>>>>> b23c3afdfd37b231b50797da04903b8aab80bf71:index.html
       </div>
 
       <div class="box">
@@ -102,18 +95,14 @@
       </div>
 
       <div class="box">
-<<<<<<< HEAD:index.php
-         <img src="Util/images/menu-8.png" alt="">
-=======
-         <img src="images/menu-1.png" alt="">
+         <img src="Util/images/menu-1.png" alt="">
          <h3>Sun Air</h3>
          <p>$5 (Pesos Argentinos)</p>
          <a href="https://mpago.la/1bzagdA" class="link-btn">Buy</a>
       </div>
 
       <div class="box">
-         <img src="images/menu-8.png" alt="">
->>>>>>> b23c3afdfd37b231b50797da04903b8aab80bf71:index.html
+         <img src="Util/images/menu-8.png" alt="">
          <h3>Nuke Air</h3>
          <p>$31 (Pesos Argentinos)</p>
          <a href="https://mpago.la/1WjWVhR" class="link-btn" id="btn_buy">Buy</a>
@@ -293,3 +282,236 @@
 <?php
   include_once $_SERVER["DOCUMENT_ROOT"].'/Premium-Air/Views/Layouts/footer.php';
 ?>
+
+<script>
+$(document).ready(function() {
+    var funcion;
+    // setTimeout(verificar_sesion, 2000);
+    // Loader();
+    verificar_sesion();
+    toastr.options = {
+      'debug': false,
+      'positionClass': 'toast-top-right',
+      'onclick': null,
+      'fadeIn': 300,
+      'fadeOut': 1000,
+      'extendedTimeOut': 1000,
+    }
+
+    function llenar_menu_superior(usuario) {
+      let template = ``;
+      if(usuario===undefined || usuario == '' || usuario == null){
+        template = `
+        <li class="nav-item"> 
+          <a class="nav-link" href="/Premium-Air/Views/register.php" role="button">
+            <i class="fas fa-user-plus"></i> Registrarse
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/Premium-Air/Views/login.php" role="button">
+            <i class="far fa-user"></i> Iniciar Sesion
+          </a>
+        </li>
+        `;
+      }
+      else{
+        template = `
+         <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <img src="/Premium-Air/Util/Img/Users/${usuario.avatar}" width="30" height="30" class="img-fluid img-circle">
+                <spa>${usuario.user}</span>
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <li><a class="dropdown-item" href="/Premium-Air/Views/mi_perfil.php"><i class="fas fa-user-cog"></i> My profile</a></li>
+                <li><a class="dropdown-item" href="#"><i class=F"fas fa-shopping-basket"></i> My orders</a></li>
+                <li><a class="dropdown-item" href="/Premium-Air/Controllers/logout.php"><i class="fas fa-user-times"></i> Close session</a></li>
+              </ul>
+         </li>
+        `;
+      }
+      // $('#loader_1').hide(500);
+      $('#main_login').html(template);
+    }
+
+    async function verificar_sesion() {
+      funcion = "verificar_sesion";
+      let data = await fetch('/Premium-Air/Controllers/UsuarioController.php', {
+        method:'POST',
+        headers: {'Content-Type': 'application/x-www-form-urlencoded'},
+        body: 'funcion=' + funcion
+      });
+      if(data.ok){
+        let response = await data.text();
+        console.log(response);
+        try {
+          if(response != ''){
+          // location.href = '../index.php';
+            let sesion = JSON.parse(response);
+            console.log(sesion);
+            llenar_menu_superior(sesion);
+            // $('#avatar_menu').attr('src', '/commerce/Util/Img/Users/' + sesion.avatar);
+            // $('usuario_menu').text(sesion.user);
+            // obtener_contadores();
+          } else {
+            llenar_menu_superior();
+          }
+          // setTimeout(llenar_productos, 2000);
+          // llenar_productos();
+          // CloseLoader();
+        } catch(error) {
+          console.error(error);
+          console.log(response);
+        }
+      } else {
+        Swal.fire({
+          icon: 'error',
+          title: data.statusText,
+          text: 'Hubo conflicto de codigo: ' + data.status,
+        });
+      }
+    }
+
+    /* ------------------------------------------ */
+    /* Metododos Tal vez necesitamos en un Futuro */
+    /* ------------------------------------------ */
+    /*
+    async function llenar_productos(){
+      funcion = "llenar_productos";
+      let data = await fetch('/commerce/Controllers/ProductoTiendaController.php', {
+        method:'POST',
+        headers: {'Content-Type': 'application/x-www-form-urlencoded'},
+        body: 'funcion=' + funcion
+      });
+      if(data.ok){
+        let response = await data.text();
+        try {
+          let productos =  JSON.parse(response);
+          // console.log(productos);
+          let template = ``;
+          productos.forEach(producto => {
+            template += `
+                <div class="col-sm-2">
+                  <div class="card">
+                    <div class="card-body">
+                      <div class="row">
+                        <div class="col-sm-12">
+                          <img src="/commerce/Util/Img/Producto/${producto.imagen}" class="img-fluid" alt="">
+                        </div>
+                        <div class="col-sm-12">
+                          <span class="text-muted float-left">${producto.marca}</span></br>
+                          <!-- Descripcion.php -> se le pasa el id y name del producto -->
+                          <a class="titulo_producto" href="/commerce/Views/descripcion.php?name=${producto.producto}&&id=${producto.id}">${producto.producto}
+                          </a>`;
+                if(producto.envio == 'gratis'){
+                  template += `</br>`;
+                  template += `<span class="badge bg-success">Envio gratis</span>`;
+                }
+                if(producto.calificacion != 0){
+                  template += `</br>`;
+                  for(let index = 0; index < producto.calificacion; index++){
+                    template += `<i class="fas fa-star text-warning"></i>`;
+                  }
+                  let estrellas_faltantes = 5 - producto.calificacion;
+                  for(let index = 0; index < estrellas_faltantes; index++) {
+                    template += `<i class="far fa-star text-warning"></i>`;
+                  }
+                  template += `</br>`;
+                }
+                if(producto.descuento != 0){
+                  template += `
+                  <span class="text-muted" style="text-decoration: line-through">S/ ${producto.precio}</span>
+                  <span class="text-muted">-${producto.descuento}%</span></br>
+                  `;
+                }
+                template += `
+                          <h4 class="text-danger">S/ ${producto.precio_descuento}</h4>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            `;
+          });
+          $('#loader_3').hide(500);
+          $('#productos').html(template);
+        } catch(error) {
+          console.error(error);
+          console.log(response);
+        }
+      } else {
+        Swal.fire({
+          icon: 'error',
+          title: data.statusText,
+          text: 'Hubo conflicto de codigo: ' + data.status,
+        });
+      }
+    }
+
+    async function obtener_contadores() {
+      funcion = "obtener_contadores";
+      let data = await fetch('/commerce/Controllers/UsuarioController.php', {
+        method:'POST',
+        headers: {'Content-Type': 'application/x-www-form-urlencoded'},
+        body: 'funcion=' + funcion
+      });
+      if(data.ok){
+        let response = await data.text();
+        try {
+          let contadores = JSON.parse(response);
+          let template = ``;
+          let template_1 = ``;
+          if(contadores.contador_mensajes>0) {
+            template = `
+              <i class="fas fa-inbox"></i> Recibidos
+              <span class="badge bg-warning float-right">${contadores.contador_mensajes}</span>
+            `;
+            template_1 = `Mensajes <span class="badge badge-warning right">${contadores.contador_mensajes}</span>`;
+          } else {
+            template = `
+            <i class="fas fa-inbox"></i> Recibidos
+            `;
+            template_1 = `Mensajes`;
+          }
+          $('#recibidos').html(template);
+          $('#nav_cont_mens').html(template_1);
+        } catch(error) {
+          console.error(error);
+          console.log(response);
+        }
+      } else {
+        Swal.fire({
+          icon: 'error',
+          title: data.statusText,
+          text: 'Hubo conflicto de codigo: ' + data.status,
+        });
+      }
+    }
+
+    function Loader(mensaje){
+      if(mensaje==''||mensaje==null){
+        mensaje = 'Cargano datos...';
+      }
+      Swal.fire({
+          position: 'center',
+          html: '<i class="fas fa-2x fa-sync-alt fa-spin"></i>',
+          title: mensaje,
+          showConfirmButton: false
+      });
+    }
+
+    function CloseLoader(mensaje, tipo){
+      if(mensaje==''||mensaje==null){
+        Swal.close();
+      }
+      else {
+        Swal.fire({
+            position: 'center',
+            icon: tipo,
+            title: mensaje,
+            showConfirmButton: false
+        });
+      }
+    }
+    */
+}) 
+</script>
