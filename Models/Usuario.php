@@ -27,11 +27,13 @@
             return $this->objetos;
         }
 
+        /*
         function registrar_usuario($username, $pass, $nombres, $apellidos, $dni, $email, $telefono){
             $sql = "INSERT INTO usuario(user, pass, nombres, apellidos, dni, email, telefono, id_tipo) VALUES(:user, :pass, :nombres, :apellidos, :dni, :email, :telefono, :id_tipo)";
             $query = $this->acceso->prepare($sql);
             $query->execute(array(':user'=>$username, ':pass'=>$pass, ':nombres'=>$nombres, ':apellidos'=>$apellidos, ':dni'=>$dni, ':email'=>$email, ':telefono'=>$telefono, ':id_tipo'=>'2'));
         }
+        */
 
         function obtener_datos($user){
             $sql = "SELECT * FROM usuario
@@ -43,6 +45,7 @@
             return $this->objetos;
         }
 
+        /*
         function  editar_datos($id_usuario,$nombres,$apellidos,$dni,$email,$telefono, $nombre){
             if($nombre != '') {
                 $sql = "UPDATE usuario SET nombres=:nombres, 
@@ -82,6 +85,7 @@
                 $query->execute($variables);
             }
         }
+        */
 
         /*
         // Aca obtengo datos de la base de datos para chequear la old contra
@@ -109,6 +113,7 @@
                 $query->execute($variables);
         }
 
+        /*
         function buscar_administradores_root(){
             $sql="SELECT * FROM usuario
                 WHERE id_tipo=:var1
@@ -123,6 +128,7 @@
             return $this->objetos;
         }
 
+        
         function llenar_destinatarios($id_usuario){
             $sql="SELECT * FROM usuario
                 WHERE usuario.id!=:id_usuario";
@@ -134,4 +140,5 @@
             $this->objetos = $query->fetchAll();
             return $this->objetos;
         }
+        */
     }

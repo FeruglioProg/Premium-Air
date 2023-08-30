@@ -14,4 +14,10 @@ class Conexion {
                 $this->contraseña,
                 $this->atributos);
     }
+
+    /*
+    public function isConnected() {
+        return $this->pdo !== null;
+    }
+    */
 }

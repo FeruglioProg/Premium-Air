@@ -316,18 +316,51 @@ $(document).ready(function() {
       }
       else{
         template = `
-         <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+        <ul>
+          <li class="nav-item inline dropdown">
+            <a class="nav-link" data-toggle="dropdown" href="/Premium-Air/Views/mi_perfil.php"><i class="fas fa-user-cog"></i> My profile</a>
+          </li>
+          <li class="nav-item inline dropdown">
+            <a class="nav-link" data-toggle="dropdown" href="#"><i class="fas fa-shopping-basket"></i> My orders</a>
+          </li>
+          <li class="nav-item inline">
+            <a class="nav-link">
+              <img src="/Premium-Air/Util/Img/Users/${usuario.avatar}" width="30" height="30" class="img-fluid img-circle">
+              <span>${usuario.user}</span>
+            </a>
+          </li>
+          <li class="nav-item inline dropdown">
+            <a class="nav-link" href="/Premium-Air/Controllers/logout.php"><i class="fas fa-user-times"></i> Log Out</a>
+          </li>
+        </ul>
+
+        `;
+         /*
+        template = `
+         <li class="nav-item">
+              <a class="nav-link">
                 <img src="/Premium-Air/Util/Img/Users/${usuario.avatar}" width="30" height="30" class="img-fluid img-circle">
                 <spa>${usuario.user}</span>
               </a>
-              <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                <li><a class="dropdown-item" href="/Premium-Air/Views/mi_perfil.php"><i class="fas fa-user-cog"></i> My profile</a></li>
-                <li><a class="dropdown-item" href="#"><i class=F"fas fa-shopping-basket"></i> My orders</a></li>
-                <li><a class="dropdown-item" href="/Premium-Air/Controllers/logout.php"><i class="fas fa-user-times"></i> Close session</a></li>
-              </ul>
-         </li>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link" data-toggle="dropdown" href="/Premium-Air/Views/mi_perfil.php"><i class="fas fa-user-cog"></i> My profile</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link" data-toggle="dropdown" href="#"><i class="fas fa-shopping-basket"></i> My orders</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link" href="/Premium-Air/Controllers/logout.php"><i class="fas fa-user-times"></i> Log Out</a>
+          </li> 
         `;
+        */
+        /*
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                  <li><a class="dropdown-item" href="/Premium-Air/Views/mi_perfil.php"><i class="fas fa-user-cog"></i> My profile</a></li>
+                  <li><a class="dropdown-item" href="#"><i class="fas fa-shopping-basket"></i> My orders</a></li>
+                  <li><a class="dropdown-item" href="/Premium-Air/Controllers/logout.php"><i class="fas fa-user-times"></i> Close session</a></li>
+              </ul>
+              */
       }
       // $('#loader_1').hide(500);
       $('#main_login').html(template);

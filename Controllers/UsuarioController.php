@@ -14,12 +14,13 @@
         $mensaje = '';
         if($usuario->objetos!=null){
             // Desencripto la contraseña asi puedo hacer el if 
-            $pass_bd = openssl_decrypt($usuario->objetos[0]->pass, CODE, KEY);
+            // $pass_bd = openssl_decrypt($usuario->objetos[0]->pass, CODE, KEY);
+            $pass_bd = $usuario->objetos[0]->pass;
+            // var_dump($pass_bd);
             if($pass_bd == $pass){ 
                 $_SESSION['id']=$usuario->objetos[0]->id;
                 $_SESSION['user']=$usuario->objetos[0]->user;
                 $_SESSION['tipo_usuario']=$usuario->objetos[0]->id_tipo;
-                $_SESSION['avatar']=$usuario->objetos[0]->avatar;
                 $_SESSION['nombre']=$usuario->objetos[0]->nombres.' '.$usuario->objetos[0]->apellidos;
 
                 $mensaje = 'logueado'; // respuesta para el archivo JS

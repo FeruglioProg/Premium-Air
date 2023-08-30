@@ -161,7 +161,7 @@
 
       <!-- User -->
       <div class="input-group mb-3">
-        <input id="user" type="text" name="" placeholder="Enter your user" id="" class="form-control" required>
+        <input id="user" type="text" name="" placeholder="Enter your user" class="form-control" required>
         <div class="input-group-append">
           <div class="input-group-text">
             <span class="fas fa-user"></span>
@@ -171,7 +171,7 @@
 
       <!-- Password -->
       <div class="input-group mb-3">
-        <input id="pass" type="password" placeholder="Enter your password" id="" class="form-control" required>
+        <input id="pass" type="password" placeholder="Enter your password" class="form-control" required>
         <div class="input-group-append">
           <div class="input-group-text">
             <span class="fas fa-lock"></span>
@@ -205,17 +205,16 @@
 <script src="/Premium-Air/Util/Js/adminlte.min.js"></script>
 
 <script src="/Premium-Air/Util/Js/toastr.min.js"></script>
-<!--
 <script>
 $(document).ready(function() {
     var funcion;
     verificar_sesion();
-    Loader();
+    // Loader();
     // setTimeout(verificar_sesion, 2000);
 
     async function verificar_sesion() {
       funcion = "verificar_sesion";
-      let data = await fetch('/Centennials/Controllers/UsuarioController.php', {
+      let data = await fetch('/Premium-Air/Controllers/UsuarioController.php', {
         method:'POST',
         headers: {'Content-Type': 'application/x-www-form-urlencoded'},
         body: 'funcion=' + funcion
@@ -224,9 +223,9 @@ $(document).ready(function() {
         let response = await data.text();
         try {
           if(response != ''){
-            location.href = '/Centennials/index.php';
+            location.href = '/Premium-Air/index.php';
           } 
-          CloseLoader();
+          // CloseLoader();
         } catch(error) {
           console.error(error);
           console.log(response);
@@ -242,22 +241,24 @@ $(document).ready(function() {
 
     async function login(user, pass) {
       funcion = "login";
-      let data = await fetch('/Centennials/Controllers/UsuarioController.php', {
+      let data = await fetch('/Premium-Air/Controllers/UsuarioController.php', {
         method:'POST',
         headers: {'Content-Type': 'application/x-www-form-urlencoded'},
         body: 'funcion=' + funcion + '&&user=' + user + '&&pass=' + pass
       });
       if(data.ok){
         let response = await data.text();
+        console.log(response);
         try {
             let respuesta =  JSON.parse(response);
+            console.log(respuesta);
              if(respuesta.mensaje == 'logueado'){
                 toastr.success('* Logueado !!!');
-                location.href = '/Centennials/index.php';
+                location.href = '/Premium-Air/index.php';
             } else if(respuesta.mensaje == 'error'){
                 toastr.error('* Usuario o contraseña incorrectas!');
             }
-          CloseLoader();
+          // CloseLoader();
         } catch(error) {
           console.error(error);
           console.log(response);
@@ -275,7 +276,7 @@ $(document).ready(function() {
         funcion = 'login';
         let user = $('#user').val();
         let pass = $('#pass').val();
-        Loader('Iniciando Sesion...');
+        // Loader('Iniciando Sesion...');
         // setTimeout(login(), 2000);
         login(user, pass);
         e.preventDefault();
@@ -311,6 +312,5 @@ $(document).ready(function() {
     */
 })
 </script>
--->
 </body>
 </html>
