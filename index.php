@@ -304,12 +304,12 @@ $(document).ready(function() {
         template = `
         <li class="nav-item"> 
           <a class="nav-link" href="/Premium-Air/Views/register.php" role="button">
-            <i class="fas fa-user-plus"></i> Registrarse
+            <i class="fas fa-user-plus"></i> Register
           </a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="/Premium-Air/Views/login.php" role="button">
-            <i class="far fa-user"></i> Iniciar Sesion
+            <i class="far fa-user"></i> Log In
           </a>
         </li>
         `;

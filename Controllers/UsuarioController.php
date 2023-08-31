@@ -59,22 +59,20 @@
         }
     }   
 
-    /*
     if($_POST['funcion'] == 'registrar_usuario'){
         $username = $_POST['username'];
         // Incriptamos la clave para que en la base de datos no se pueda ver
         $pass = openssl_encrypt($_POST['pass'],CODE,KEY);
         $nombres = $_POST['nombres'];
         $apellidos = $_POST['apellidos'];
-        $dni = $_POST['dni'];
+        // $dni = $_POST['dni'];
         $email = $_POST['email'];
         $telefono = $_POST['telefono'];
-        $usuario->registrar_usuario($username,$pass,$nombres,$apellidos,$dni,$email,$telefono);
+        $usuario->registrar_usuario($username,$pass,$nombres,$apellidos,$email,$telefono);
         $json = array(
             'mensaje'=>'success'
         );
         $jsonstring= json_encode($json);
         echo $jsonstring;
     } 
-    */
 ?>

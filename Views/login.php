@@ -11,19 +11,15 @@
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
   
-  <!-- custom css file link  -->
-  <!--
-  <link rel="stylesheet" href="/Premium-Air/Util/Css/style.css">
-  <link rel="stylesheet" href="/Premium-Air/Util/Css/style.scss">
-  -->
+  <!-- Favicon Image -->
   <link rel="icon" type="image/x-icon" href="/Premium-Air/Util/images/favicon.ico">
 
   <!-- Font Awesome -->
   <link rel="stylesheet" href="/Premium-Air/Util/Css/css/all.min.css">
 
-  <!-- icheck bootstrap -->
-  <!-- Theme style -->
+  <!-- Toastr -->
   <link rel="stylesheet" href="/Premium-Air/Util/Css/toastr.min.css">
+  <!-- Adminlte -->
   <link rel="stylesheet" href="/Premium-Air/Util/Css/adminlte.min.css">
 </head>
 <body class="hold-transition login-page">
@@ -50,13 +46,6 @@
             justify-content: center;
     padding: 2rem;
   }
-  /*
-  .login-form.active {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-  }
-  */
 
   .login-form form {
     padding: 4rem;
@@ -106,7 +95,7 @@
   }
 
   .login-form form .flex label {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     line-height: 2;
     color: #666;
     margin-bottom: 0;
@@ -114,7 +103,7 @@
   }
 
   .login-form form .flex a {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     color: #5888a4;
     margin-left: auto;
   }
@@ -131,7 +120,7 @@
   .login-form form .account {
     padding: 1.5rem .5rem;
     background: #eee;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     line-height: 2;
     color: #666;
     margin-bottom: 0;
@@ -144,15 +133,17 @@
   .login-form form .account a:hover {
     text-decoration: underline !important;
   }
+
+  /* Agregados */ 
+  .form-control::placeholder{
+    font-size: 1.2rem;
+  }
+
+  .btn-login{
+    font-size: 1.2rem;
+  }
 </style>
 <div class="login-box ">
-  <!--
-  <div class="login-logo">
-    <img src="/Premium-Air/Util/images/favicon.ico" class="profile-user-img img-fluid img-circle">
-    <a href="/Premium-Air/index.php"><b>Premium</b>AIR</a>
-  </div>
--->
-
   <div class="login-form">
    <form id="form-login" action="">
       <!-- Logo -->
@@ -187,8 +178,7 @@
       </div>
       
       <!-- Log In -->
-      <!--<input type="submit" value="login now" class="link-btn">-->
-      <button type="submit" href="#" class="btn btn-block btn-primary">
+      <button type="submit" href="#" class="btn btn-block btn-primary btn-login">
         Log In
       </button>
       <p class="account">Don't have an account? <a href="/Premium-Air/Views/register.php">Create one!</a></p>
@@ -203,7 +193,7 @@
 <script src="/Premium-Air/Util/Js/bootstrap.bundle.min.js"></script>
 <!-- AdminLTE App -->
 <script src="/Premium-Air/Util/Js/adminlte.min.js"></script>
-
+<!-- Toastr -->
 <script src="/Premium-Air/Util/Js/toastr.min.js"></script>
 <script>
 $(document).ready(function() {

@@ -27,13 +27,11 @@
             return $this->objetos;
         }
 
-        /*
-        function registrar_usuario($username, $pass, $nombres, $apellidos, $dni, $email, $telefono){
-            $sql = "INSERT INTO usuario(user, pass, nombres, apellidos, dni, email, telefono, id_tipo) VALUES(:user, :pass, :nombres, :apellidos, :dni, :email, :telefono, :id_tipo)";
+        function registrar_usuario($username, $pass, $nombres, $apellidos, $email, $telefono){
+            $sql = "INSERT INTO usuario(user, pass, nombres, apellidos, email, telefono, id_tipo) VALUES(:user, :pass, :nombres, :apellidos, :email, :telefono, :id_tipo)";
             $query = $this->acceso->prepare($sql);
-            $query->execute(array(':user'=>$username, ':pass'=>$pass, ':nombres'=>$nombres, ':apellidos'=>$apellidos, ':dni'=>$dni, ':email'=>$email, ':telefono'=>$telefono, ':id_tipo'=>'2'));
+            $query->execute(array(':user'=>$username, ':pass'=>$pass, ':nombres'=>$nombres, ':apellidos'=>$apellidos, ':email'=>$email, ':telefono'=>$telefono, ':id_tipo'=>'2'));
         }
-        */
 
         function obtener_datos($user){
             $sql = "SELECT * FROM usuario
