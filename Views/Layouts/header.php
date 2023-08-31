@@ -28,9 +28,12 @@
      crossorigin="anonymous"></script> -->
 </head>
 <body>
-   
 <!-- header section starts     -->
-
+<style>
+   .ml-auto{
+      margin-top: 6px;
+   }
+</style>
 <header class="header fixed-top">
 
    <div class="container">
@@ -45,19 +48,9 @@
             <a href="#menu">Menu</a>
             <a href="#blogs">Membership</a>
             <a href="#contact">Contact</a>
-            <div class="icons">
-               <ul id="main_login" class="navbar-nav ml-auto">
-                  <!--
-                  <div id="loader_1" class="overlay">
-                     <i class="fas fa-2x fa-sync-alt fa-spin"></i>
-                  </div>   
-                  -->
-               </ul>
-               <!--
-                  <div id="menu-btn" class="fas fa-bars"></div>
-                  <div id="login-btn" class="fas fa-user"></div>
-               -->
-            </div>
+            <ul id="main_login" class="icons ml-auto">
+               <!-- Template Index.php Login|Register-->
+            </ul>
          </nav>
 
       </div>
